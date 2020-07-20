@@ -8,7 +8,6 @@ Created on Mon Jul 20 18:07:23 2020
 
 import json
 import matplotlib.pyplot as plt 
-import collections
 from datetime import datetime as d
 import numpy as np
 
@@ -21,8 +20,7 @@ with open('latest-rates.json') as f:
 first=d(2019,1,1)
 last=d(2019,1,31)
 
-values = data["rates"]
-values =collections.OrderedDict(sorted(values.items()))
+values = sorted(data["rates"])
 
 valueINR=[]
 valueGBP=[]
