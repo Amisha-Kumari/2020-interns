@@ -1,11 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Jul 20 18:07:23 2020
-
-@author: Lenovo
-"""
-
-
 import json
 import matplotlib.pyplot as plt 
 from datetime import datetime as d
@@ -38,8 +30,8 @@ plt.plot(date,valueGBP, linewidth=2, linestyle='solid', color='red', label='GBP'
 
 plt.xlabel('January 2019')
 plt.xticks(np.arange(32),rotation=45)
-plt.ylabel('Value of INR wrt EUR')
-plt.title('Exchange rate of INR against EUR')
+plt.ylabel('Values wrt EUR')
+plt.title('Exchange rates against EUR')
 l=plt.legend(loc="center right")
 l.get_texts()[0].set_text("INR="+str(latest['rates']['INR']))
 l.get_texts()[1].set_text("GBP="+str(latest['rates']['GBP']))
