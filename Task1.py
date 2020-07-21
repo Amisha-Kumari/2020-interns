@@ -1,11 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Jul 20 06:35:59 2020
-
-@author: Lenovo
-"""
-
-
 import json
 import matplotlib.pyplot as plt 
 from datetime import datetime as d
