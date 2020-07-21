@@ -1,14 +1,5 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Jul 20 13:35:25 2020
-
-@author: Lenovo
-"""
-
-
 import json
 import matplotlib.pyplot as plt 
-import collections
 from datetime import datetime as d
 import numpy as np
 
@@ -18,8 +9,7 @@ with open('data.json') as f:
 first=d(2019,1,1)
 last=d(2019,1,31)
 
-values = data["rates"]
-values =collections.OrderedDict(sorted(values.items()))
+values = sorted(data["rates"])
 
 valueINR=[]
 valueGBP=[]
@@ -37,7 +27,7 @@ plt.plot(date,valueGBP, linewidth=2, linestyle='solid', color='red', label='GBP'
 
 plt.xlabel('January 2019')
 plt.xticks(np.arange(32),rotation=45)
-plt.ylabel('Value wrt EUR')
+plt.ylabel('Values wrt EUR')
 plt.title('Exchange rate against EUR')
 plt.legend()
 plt.show()
